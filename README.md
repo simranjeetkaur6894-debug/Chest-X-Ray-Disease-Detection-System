@@ -1,18 +1,16 @@
 # 🩺 Chest X-Ray Disease Detection System
 
-An AI-powered web application that analyzes chest X-ray images and classifies them into four categories using a trained Keras deep learning model.
+An AI-powered web application that uses Deep Learning to analyze chest X-ray images and classify them into four categories. The system provides prediction results, confidence scores, dashboard analytics, secure user authentication, and persistent scan history.
 
 ## 1. Project Overview
 
-The Chest X-Ray Disease Detection System is designed to demonstrate how Artificial Intelligence and Deep Learning can be used for educational chest X-ray image classification.
+The **Chest X-Ray Disease Detection System** is an educational AI-based application developed using Python, TensorFlow/Keras, FastAPI, HTML, CSS, JavaScript, and SQLite.
 
-Users can upload chest X-ray images, receive model predictions, view confidence scores, and maintain a history of previous scans.
-
-**Important:** This application is intended for educational purposes only. It is not a substitute for professional medical diagnosis.
+Users can create an account, upload chest X-ray images, analyze them using a trained deep learning model, view prediction results, and manage their previous scan records.
 
 ## 2. Disease Categories
 
-The system classifies X-ray images into four categories:
+The model classifies chest X-ray images into four categories:
 
 - COVID
 - Lung Opacity
@@ -21,18 +19,20 @@ The system classifies X-ray images into four categories:
 
 ## 3. Key Features
 
-- AI-based chest X-ray classification
-- Image upload and prediction
-- Confidence percentage for predictions
+- User registration and login
+- JWT-based authentication
+- AI-powered chest X-ray classification
+- Image upload and analysis
+- Prediction confidence percentage
 - Score comparison across all four categories
-- Interactive dashboard
-- Total scan statistics
+- Interactive dashboard and scan statistics
 - Persistent scan history using SQLite
 - Search and filter scan records
-- View detailed prediction results
+- View detailed scan results
 - Delete individual scan records
-- Export scan history as CSV
-- Neon Purple 3D user interface
+- PDF prediction report generation
+- User profile management
+- Neon Purple 3D interface
 - Responsive frontend design
 
 ## 4. Technologies Used
@@ -45,7 +45,9 @@ The system classifies X-ray images into four categories:
 | Frontend | HTML, CSS, JavaScript |
 | Database | SQLite |
 | ORM | SQLAlchemy |
-| Image Processing | Pillow (PIL) |
+| Authentication | JWT |
+| Image Processing | Pillow |
+| PDF Reports | ReportLab |
 | API Server | Uvicorn |
 
 ## 5. Project Structure
@@ -54,39 +56,75 @@ The system classifies X-ray images into four categories:
 Chest_Xray_Project/
 │
 ├── backend/
-│   ├── main.py
+│   ├── auth.py
 │   ├── database.py
+│   ├── main.py
 │   └── models.py
 │
 ├── frontend/
-│   ├── index.html
-│   ├── style.css
-│   └── script.js
+│   ├── css/
+│   │   ├── auth.css
+│   │   ├── dashboard.css
+│   │   ├── history.css
+│   │   ├── home.css
+│   │   ├── profile.css
+│   │   └── scanner.css
+│   │
+│   ├── js/
+│   │   ├── auth.js
+│   │   ├── dashboard.js
+│   │   ├── history.js
+│   │   ├── home.js
+│   │   ├── profile.js
+│   │   └── scanner.js
+│   │
+│   ├── dashboard.html
+│   ├── history.html
+│   ├── home.html
+│   ├── login.html
+│   ├── profile.html
+│   ├── scanner.html
+│   └── signup.html
 │
 ├── models/
-│   ├── xray_disease_detector.keras
 │   ├── class_names.json
-│   └── metadata.json
+│   ├── config.json
+│   ├── metadata.json
+│   └── xray_disease_detector.keras
 │
 ├── data/
-│   └── chest_xray_history.db
-│
-├── COVID-19_Radiography_Dataset/
 │
 ├── final_project.ipynb
 ├── requirements.txt
+├── .gitignore
 └── README.md
 ```
 
+**Note:** The trained `.keras` model and original dataset are excluded from this GitHub repository because of their large file sizes. The trained model must be obtained and placed in the `models/` directory separately.
+
 ## 6. Installation Requirements
 
-Make sure Python is installed on your system.
+Make sure Python is installed on your computer.
+
+Clone the repository:
+
+```powershell
+git clone https://github.com/simranjeetkaur6894-debug/Chest-X-Ray-Disease-Detection-System.git
+```
+
+Navigate to the project directory:
+
+```powershell
+cd Chest-X-Ray-Disease-Detection-System
+```
 
 Install the required dependencies:
 
 ```powershell
 python -m pip install -r requirements.txt
 ```
+
+Place the trained model file in the `models/` directory before starting the application.
 
 ## 7. Running the Backend
 
@@ -108,9 +146,15 @@ API Documentation:
 http://127.0.0.1:8000/docs
 ```
 
+Health Check:
+
+```text
+http://127.0.0.1:8000/health
+```
+
 ## 8. Running the Frontend
 
-Open another PowerShell terminal and execute:
+Open a second PowerShell terminal:
 
 ```powershell
 cd frontend
@@ -123,25 +167,28 @@ Open the application in your browser:
 http://localhost:5500
 ```
 
-## 9. API Endpoints
+Keep both backend and frontend servers running while using the application.
 
-| Method | Endpoint | Purpose |
-|---|---|---|
-| GET | / | API status |
-| GET | /health | Model health check |
-| POST | /predict | Predict X-ray image |
-| GET | /history | Retrieve scan history |
-| GET | /history/{scan_id} | View scan details |
-| DELETE | /history/{scan_id} | Delete scan record |
-| GET | /dashboard/stats | Dashboard statistics |
+## 9. Application Modules
+
+| Module | Description |
+|---|---|
+| Home | Application introduction and navigation |
+| Signup | New user registration |
+| Login | Secure user login |
+| Dashboard | Scan statistics and overview |
+| Scanner | Upload and analyze X-ray images |
+| History | View and manage previous scans |
+| Profile | User profile information |
 
 ## 10. Database Management
 
-The application uses SQLite for persistent storage.
+The application uses SQLite for persistent data storage.
 
-Each scan record stores:
+User records include account information, while scan history stores information such as:
 
 - Scan ID
+- User ID
 - Uploaded filename
 - Predicted disease category
 - Confidence percentage
@@ -151,28 +198,38 @@ Each scan record stores:
 ## 11. Application Workflow
 
 1. Open the web application.
-2. Navigate to the Scanner section.
-3. Upload a chest X-ray image.
-4. Click the Analyze button.
-5. View the predicted category and confidence score.
-6. Open Dashboard to view scan statistics.
-7. Open History to view previous scans.
-8. Search, filter, view details, delete, or export records.
+2. Create an account or log in.
+3. Navigate to the Dashboard.
+4. Open the Scanner section.
+5. Upload a chest X-ray image.
+6. Click the Analyze button.
+7. View the predicted category and confidence score.
+8. Download the prediction report as a PDF.
+9. Visit History to review previous scans.
+10. Manage scan records and profile information.
 
 ## 12. Future Enhancements
 
-- Improved model evaluation and accuracy
-- More advanced visualization of prediction analytics
-- User authentication and role management
-- Advanced scan comparison features
-- Deployment on a cloud platform
+- Improved model evaluation and validation
+- More advanced prediction visualizations
+- Additional chest disease categories
+- Cloud-based deployment
+- Enhanced analytics and reporting
 
 ## 13. Medical Disclaimer
 
-This project is developed for educational and academic purposes. Its predictions are generated by an AI model and may be inaccurate. Results must not be used to diagnose, treat, or make medical decisions. Always consult a qualified healthcare professional.
+This project is developed for educational and academic purposes only. Its predictions are generated by an artificial intelligence model and may be inaccurate. The application is not intended to diagnose, treat, or prevent any medical condition. Always consult a qualified healthcare professional for medical advice.
 
-## 14. Project Title
+## 14. Project Information
 
-**Chest X-Ray Disease Detection System**
+**Project Name:** Chest X-Ray Disease Detection System
 
-*An AI-powered educational chest X-ray classification application.*
+**Project Type:** Artificial Intelligence / Deep Learning Web Application
+
+**Interface Theme:** Neon Purple 3D
+
+**Repository:** [GitHub Project Repository](https://github.com/simranjeetkaur6894-debug/Chest-X-Ray-Disease-Detection-System)
+
+---
+
+*Developed as an educational project demonstrating the integration of Deep Learning with a web-based application.*
