@@ -1,0 +1,58 @@
+
+.history-card {
+    background: linear-gradient(145deg, #21183b, #130e25);
+    border: 1px solid #54317d;
+    border-radius: 16px;
+    padding: 22px;
+    margin-top: 20px;
+    box-shadow: 0 8px 25px #0005;
+}
+
+.history-card h3 {
+    color: #c58aff;
+    margin-bottom: 12px;
+}
+
+.history-card p {
+    color: #c5bdd8;
+    margin: 9px 0;
+    font-size: 14px;
+}
+
+.history-card button,
+#refreshHistory,
+#closeDetails {
+    padding: 10px 17px;
+    margin: 12px 8px 0 0;
+    border: 0;
+    border-radius: 9px;
+    color: white;
+    background: linear-gradient(110deg, #762bea, #b04aff);
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.history-card button:hover,
+#refreshHistory:hover,
+#closeDetails:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 18px #a34aff66;
+}
+
+#historyCount {
+    color: #c58aff;
+    margin: 20px 0;
+}
+
+#historyDetails {
+    text-align: left;
+}
+
+#historyDetails p {
+    margin: 12px 0;
+    color: #d5cce7;
+}
+
+#historyDetails h2 {
+    color: #c58aff;
+}

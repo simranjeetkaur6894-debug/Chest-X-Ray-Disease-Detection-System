@@ -1,0 +1,89 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up | Chest X-Ray Disease Detection</title>
+    <link rel="stylesheet" href="css/auth.css">
+</head>
+<body>
+
+    <div class="auth-background">
+        <div class="glow glow-one"></div>
+        <div class="glow glow-two"></div>
+
+        <div class="auth-container">
+
+            <div class="auth-brand">
+                <div class="brand-icon">✚</div>
+                <h1>Chest X-Ray</h1>
+                <p>AI Disease Detection System</p>
+            </div>
+
+            <div class="auth-card">
+                <span class="auth-label">GET STARTED</span>
+                <h2>Create Account</h2>
+                <p class="auth-description">
+                    Create your account to access your AI workspace.
+                </p>
+
+                <form id="signupForm">
+
+                    <label for="fullName">Full Name</label>
+                    <input
+                        type="text"
+                        id="fullName"
+                        placeholder="Enter your full name"
+                        required
+                    >
+
+                    <label for="email">Email Address</label>
+                    <input
+                        type="email"
+                        id="email"
+                        placeholder="Enter your email"
+                        required
+                    >
+
+                    <label for="password">Password</label>
+                    <input
+                        type="password"
+                        id="password"
+                        placeholder="Create a password"
+                        minlength="8"
+                        required
+                    >
+
+                    <label for="confirmPassword">Confirm Password</label>
+                    <input
+                        type="password"
+                        id="confirmPassword"
+                        placeholder="Re-enter your password"
+                        minlength="8"
+                        required
+                    >
+
+                    <button type="submit" class="auth-button">
+                        Create Account →
+                    </button>
+
+                </form>
+
+                <p class="auth-switch">
+                    Already have an account?
+                    <a href="login.html">Login</a>
+                </p>
+
+            </div>
+
+            <p class="auth-footer">
+                AI-powered educational chest X-ray classification
+            </p>
+
+        </div>
+    </div>
+
+    <script src="js/auth.js"></script>
+</body>
+</html>

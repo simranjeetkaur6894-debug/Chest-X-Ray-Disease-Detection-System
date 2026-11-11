@@ -1,0 +1,354 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Chest X-Ray | AI Vision</title>
+
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+
+<body>
+  <div class="background-glow glow-one"></div>
+  <div class="background-glow glow-two"></div>
+
+  <header class="navbar">
+    <a class="brand" href="#">
+      <span class="brand-icon">✳</span>
+      <span>XRAY<span class="brand-accent">VISION</span></span>
+    </a>
+
+    <nav class="nav-links">
+      <a href="#home">Home</a>
+      <a href="#dashboard">Dashboard</a>
+      <a href="#technology">Technology</a>
+      <a href="#about">About</a>
+    </nav>
+
+    <a class="nav-button" href="#scanner">Launch Scanner <span>↗</span></a>
+  </header>
+
+  <main id="home" class="hero">
+    <section class="hero-content">
+      <div class="eyebrow">
+        <span class="status-dot"></span>
+        X-RAY IMAGING SYSTEM
+      </div>
+
+      <h1>
+        Chest X-Ray Disease Detection System<br>
+        Disease <span class="gradient-text">Detection</span>
+      </h1>
+
+      <p class="hero-description">
+        Explore intelligent chest X-ray image classification
+        through a next-generation AI-powered interface.
+      </p>
+
+      <div class="hero-actions">
+        <a class="primary-button" href="#scanner">
+          Explore AI Scanner <span>→</span>
+        </a>
+        <a class="secondary-button" href="#technology">
+          Discover Technology
+        </a>
+      </div>
+
+      <div class="hero-stats">
+        <div>
+          <strong>04</strong>
+          <span>Output Classes</span>
+        </div>
+        <div class="stat-divider"></div>
+        <div>
+          <strong>AI</strong>
+          <span>Image Analysis</span>
+        </div>
+        <div class="stat-divider"></div>
+        <div>
+          <strong>3D</strong>
+          <span>Visual Experience</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="hero-visual" aria-label="AI imaging illustration">
+      <div class="orbit orbit-outer"></div>
+      <div class="orbit orbit-inner"></div>
+
+      <div class="scanner-ring ring-one"></div>
+      <div class="scanner-ring ring-two"></div>
+
+      <div class="scan-card">
+        <div class="scan-card-top">
+          <span><i class="status-dot"></i> VISION CORE</span>
+          <span>XR—04</span>
+        </div>
+
+        <div class="lung-art">
+          <svg viewBox="0 0 320 340" role="img"
+               aria-label="Stylized glowing lung illustration">
+            <defs>
+              <linearGradient id="lungGradient" x1="0" y1="0" x2="1" y2="1">
+                <stop offset="0%" stop-color="#e5c9ff"/>
+                <stop offset="45%" stop-color="#a855f7"/>
+                <stop offset="100%" stop-color="#6728db"/>
+              </linearGradient>
+              <filter id="lungGlow" x="-50%" y="-50%" width="200%" height="200%">
+                <feGaussianBlur stdDeviation="5" result="blur"/>
+                <feMerge>
+                  <feMergeNode in="blur"/>
+                  <feMergeNode in="SourceGraphic"/>
+                </feMerge>
+              </filter>
+            </defs>
+
+            <g fill="none" stroke="#a855f7" stroke-width="1" opacity=".22">
+              <ellipse cx="160" cy="170" rx="112" ry="140"/>
+              <ellipse cx="160" cy="170" rx="86" ry="115"/>
+              <path d="M45 170H275M160 30V310"/>
+            </g>
+
+            <g filter="url(#lungGlow)" stroke="url(#lungGradient)"
+               stroke-width="5" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M151 40 L151 139 Q142 150 125 164"
+                    fill="none" stroke-width="10"/>
+              <path d="M169 40 L169 139 Q178 150 195 164"
+                    fill="none" stroke-width="10"/>
+              <path d="M151 112 L124 137 M169 112 L196 137"
+                    fill="none" stroke-width="5"/>
+
+              <path d="M133 126
+                C111 101 81 119 65 153
+                C48 190 50 244 75 269
+                C92 286 120 273 133 250
+                C146 228 145 204 143 183
+                L143 143 Z"
+                fill="url(#lungGradient)" fill-opacity=".13"/>
+
+              <path d="M187 126
+                C209 101 239 119 255 153
+                C272 190 270 244 245 269
+                C228 286 200 273 187 250
+                C174 228 175 204 177 183
+                L177 143 Z"
+                fill="url(#lungGradient)" fill-opacity=".13"/>
+
+              <path d="M143 146 L108 178 L91 211 M143 168 L119 202 L116 235
+                       M177 146 L212 178 L229 211 M177 168 L201 202 L204 235"
+                    fill="none" stroke-width="3"/>
+
+              <path d="M143 183 Q160 205 177 183"
+                    fill="none" stroke-width="4"/>
+            </g>
+
+            <circle cx="160" cy="178" r="4" fill="#f5d0fe"/>
+          </svg>
+        </div>
+
+        <div class="scan-card-bottom">
+          <div>
+            <span class="micro-label">SYSTEM STATUS</span>
+            <strong><i class="status-dot"></i> ONLINE</strong>
+          </div>
+          <div class="pulse-bars" aria-label="Animated signal">
+            <span></span><span></span><span></span><span></span><span></span>
+            <span></span><span></span><span></span><span></span>
+          </div>
+        </div>
+      </div>
+
+      <div class="floating-chip chip-top">
+        <span class="chip-symbol">✧</span>
+        <div>
+          <strong>Neural Vision</strong>
+          <small>Intelligent imaging</small>
+        </div>
+      </div>
+
+      <div class="floating-chip chip-bottom">
+        <span class="chip-symbol">⌘</span>
+        <div>
+          <strong>4-Class Model</strong>
+          <small>Image classification</small>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <section id="technology" class="info-section">
+    <div class="section-heading">
+      <span class="eyebrow">BUILT FOR INTELLIGENCE</span>
+      <h2>Imaging meets <span class="gradient-text">innovation.</span></h2>
+      <p>A unified experience connecting AI classification with a modern interface.</p>
+    </div>
+
+    <div class="feature-grid">
+      <article class="feature-card">
+        <span class="feature-icon">◈</span>
+        <h3>AI Classification</h3>
+        <p>Use a trained model to classify uploaded chest X-ray images.</p>
+      </article>
+
+      <article class="feature-card">
+        <span class="feature-icon">⌁</span>
+        <h3>Visual Analytics</h3>
+        <p>Present model outputs in a clear and easy-to-understand format.</p>
+      </article>
+
+      <article class="feature-card">
+        <span class="feature-icon">◷</span>
+        <h3>Scan History</h3>
+        <p>Connect with the backend to review saved prediction records.</p>
+      </article>
+    </div>
+  </section>
+
+  <section id="scanner" class="scanner-cta">
+    <div class="scanner-intro">
+      <span class="eyebrow">AI SCAN WORKSPACE</span>
+      <h2>Upload your <span class="gradient-text">X-ray.</span></h2>
+      <p>Select a chest X-ray image to send to your AI model for educational classification.</p>
+    </div>
+
+    <form id="xrayForm" class="upload-form">
+      <label for="xrayFile" class="upload-zone" id="uploadZone">
+        <span class="upload-icon">↑</span>
+        <strong id="uploadTitle">Choose a chest X-ray</strong>
+        <span id="uploadHint">Click to select JPG, PNG or WEBP</span>
+        <input
+          type="file"
+          id="xrayFile"
+          name="file"
+          accept=".jpg,.jpeg,.png,.webp,image/jpeg,image/png,image/webp"
+          required
+        >
+      </label>
+
+      <button type="submit" class="primary-button" id="predictButton">
+        Analyze X-ray <span>→</span>
+      </button>
+
+      <p id="scanStatus" class="scan-status" role="status" aria-live="polite">
+        Backend connection will be checked when you analyze an image.
+      </p>
+    </form>
+
+    <div id="resultPanel" class="result-panel" hidden>
+      <span class="eyebrow">CLASSIFICATION RESULT</span>
+      <h3 id="resultClass">—</h3>
+      <p>Model confidence: <strong id="resultConfidence">—</strong></p>
+      <div id="predictionScores" class="prediction-scores"></div>
+      <p class="disclaimer">
+        Educational AI output only. This result is not a medical diagnosis.
+      </p>
+    </div>
+  </section>
+
+
+    <footer id="about">
+      <a class="brand" href="#home">
+        <span class="brand-icon">✳</span>
+        <span>XRAY<span class="brand-accent">VISION</span></span>
+      </a>
+      <p>Chest X-Ray Disease Detection System · Educational project</p>
+      <p class="disclaimer">
+        This tool is for educational purposes only and is not a medical diagnosis.
+      </p>
+    </footer>
+    
+  <!-- SCAN HISTORY SECTION -->
+  <section id="history" class="history-section">
+    <div class="history-header">
+      <span class="eyebrow">YOUR SCAN RECORDS</span>
+      <h2>Scan <span class="gradient-text">History</span></h2>
+      <p>View your previously analyzed chest X-ray scans.</p>
+    </div>
+
+    <div class="history-toolbar">
+      <input
+        type="text"
+        id="historySearch"
+        placeholder="Search by filename or disease..."
+      >
+
+      <select id="diseaseFilter">
+        <option value="all">All Diseases</option>
+        <option value="COVID">COVID</option>
+        <option value="Lung_Opacity">Lung Opacity</option>
+        <option value="Normal">Normal</option>
+        <option value="Viral Pneumonia">Viral Pneumonia</option>
+      </select>
+
+      <span id="historyCount">Loading scans...</span>
+
+      <button type="button" id="refreshHistory" class="primary-button">
+        Refresh History ↻
+      </button>
+      <button
+        type="button"
+        id="exportHistory"
+        class="primary-button">
+        Export CSV ↓
+      </button>
+    </div>
+
+    <div id="historyList" class="history-list">
+      <p class="history-message">Loading your scan history...</p>
+    </div>
+    
+  <!-- SCAN DETAILS PANEL -->
+  <div id="historyDetails" class="history-details" hidden>
+    <span class="eyebrow">SCAN DETAILS</span>
+    <h3 id="detailClass">—</h3>
+    <p>File: <span id="detailFilename">—</span></p>
+    <p>Confidence: <strong id="detailConfidence">—</strong></p>
+    <p>Scan Date: <span id="detailDate">—</span></p>
+    <div id="detailScores" class="prediction-scores"></div>
+    <button type="button" id="closeDetails" class="primary-button">
+      Close Details
+    </button>
+  </div>
+
+  </section>
+  <!-- DASHBOARD SECTION -->
+  <section id="dashboard" class="dashboard-section">
+    <div class="dashboard-header">
+      <span class="eyebrow">PROJECT OVERVIEW</span>
+      <h2>System <span class="gradient-text">Dashboard</span></h2>
+      <p>Monitor your chest X-ray analysis activity.</p>
+    </div>
+
+    <div class="dashboard-grid">
+      <div class="dashboard-card">
+        <span class="dashboard-icon">📊</span>
+        <p>Total Scans</p>
+        <h3 id="totalScans">0</h3>
+      </div>
+
+      <div class="dashboard-card">
+        <span class="dashboard-icon">🧬</span>
+        <p>Disease Categories</p>
+        <h3>04</h3>
+      </div>
+
+      <div class="dashboard-card">
+        <span class="dashboard-icon">💾</span>
+        <p>Storage System</p>
+        <h3>SQLite</h3>
+      </div>
+    </div>
+
+    <div class="dashboard-card analytics-card">
+      <h3>Prediction Analytics</h3>
+      <p>Scan distribution will appear here.</p>
+      <div id="predictionAnalytics"></div>
+    </div>
+  </section>
+<script src="script.js"></script>
+</body>
+</html>

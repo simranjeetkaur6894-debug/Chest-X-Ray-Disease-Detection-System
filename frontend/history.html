@@ -1,0 +1,57 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scan History | Chest X-Ray Disease Detection</title>
+    <link rel="stylesheet" href="css/scanner.css">
+    <link rel="stylesheet" href="css/history.css">
+</head>
+<body>
+    <div class="scanner-container">
+        <aside class="sidebar">
+            <h2>XR<span>AI</span></h2>
+            <nav>
+                <a href="home.html">Home</a>
+                <a href="dashboard.html">Dashboard</a>
+                <a href="scanner.html">X-Ray Scanner</a>
+                <a href="history.html" class="active">Scan History</a>
+                <a href="profile.html">Profile & Settings</a>
+            </nav>
+            <button id="logoutBtn">Logout</button>
+        </aside>
+
+        <main class="main-content">
+            <header>
+                <p>YOUR PREVIOUS ANALYSES</p>
+                <h1>Scan History</h1>
+                <span>View and manage your previous X-ray scans.</span>
+            </header>
+
+            <section class="upload-card">
+                <h2>My Scan Records</h2>
+                <p id="historyCount">Loading scan history...</p>
+                <button id="refreshHistory">Refresh History</button>
+                <div id="historyList"></div>
+            </section>
+
+            <section id="historyDetails" class="result-card" hidden>
+                <h2>Scan Details</h2>
+                <p id="detailClass"></p>
+                <p id="detailFilename"></p>
+                <p id="detailConfidence"></p>
+                <p id="detailDate"></p>
+                <div id="detailScores"></div>
+                <button id="closeDetails">Close Details</button>
+            </section>
+
+            <p class="disclaimer">
+                Educational use only. AI predictions are not a medical diagnosis.
+            </p>
+        </main>
+    </div>
+
+    <script src="js/history.js"></script>
+</body>
+</html>

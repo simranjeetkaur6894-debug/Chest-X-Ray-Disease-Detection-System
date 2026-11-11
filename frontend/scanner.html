@@ -1,0 +1,61 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>X-Ray Scanner | Chest X-Ray Disease Detection</title>
+    <link rel="stylesheet" href="css/scanner.css">
+</head>
+<body>
+
+    <div class="scanner-container">
+        <aside class="sidebar">
+            <h2>XR<span>AI</span></h2>
+            <nav>
+                <a href="home.html">Home</a>
+                <a href="dashboard.html">Dashboard</a>
+                <a href="scanner.html" class="active">X-Ray Scanner</a>
+                <a href="history.html">Scan History</a>
+                <a href="profile.html">Profile & Settings</a>
+            </nav>
+            <button id="logoutBtn">Logout</button>
+        </aside>
+
+        <main class="main-content">
+            <header>
+                <p>AI POWERED DIAGNOSTICS</p>
+                <h1>Chest X-Ray Scanner</h1>
+                <span>Upload your chest X-ray image for AI analysis.</span>
+            </header>
+
+            <section class="upload-card">
+                <div class="upload-icon">＋</div>
+                <h2>Upload X-Ray Image</h2>
+                <p>Select a chest X-ray image in JPG, JPEG or PNG format.</p>
+
+                <input type="file" id="xrayInput"
+                       accept=".jpg,.jpeg,.png,image/jpeg,image/png">
+
+                <button id="analyzeBtn">Analyze X-Ray</button>
+                <p id="statusMessage"></p>
+            </section>
+
+            <section id="resultSection" class="result-card" hidden>
+                <h2>Analysis Results</h2>
+                <div id="predictionResult"></div>
+                <button id="downloadReportBtn" hidden>
+                    Download PDF Report
+                </button>
+            </section>
+
+            <p class="disclaimer">
+                Educational use only. AI predictions are not a medical diagnosis.
+                Always consult a qualified healthcare professional.
+            </p>
+        </main>
+    </div>
+
+    <script src="js/scanner.js"></script>
+</body>
+</html>

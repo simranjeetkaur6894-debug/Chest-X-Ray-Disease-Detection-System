@@ -1,0 +1,90 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard | Chest X-Ray Disease Detection</title>
+    <link rel="stylesheet" href="css/scanner.css">
+    <link rel="stylesheet" href="css/dashboard.css">
+</head>
+<body>
+
+<div class="app-layout">
+
+    <aside class="sidebar">
+        <h2 class="logo">X-Ray AI</h2>
+
+        <nav>
+            <a href="home.html">Home</a>
+            <a href="dashboard.html" class="active">Dashboard</a>
+            <a href="scanner.html">AI Scanner</a>
+            <a href="history.html">Scan History</a>
+            <a href="profile.html">My Profile</a>
+        </nav>
+
+        <button id="logoutBtn">Logout</button>
+    </aside>
+
+    <main class="main-content">
+
+        <header class="dashboard-header">
+            <div>
+                <p class="welcome-text">WELCOME BACK</p>
+                <h1>Dashboard Overview</h1>
+                <p class="subtitle">Your Chest X-Ray AI analysis at a glance.</p>
+            </div>
+
+            <a href="scanner.html" class="scan-button">+ New Scan</a>
+        </header>
+
+        <section class="stats-grid">
+
+            <div class="stat-card">
+                <p>Total Scans</p>
+                <h2 id="totalScans">0</h2>
+                <span>All your analyses</span>
+            </div>
+
+            <div class="stat-card">
+                <p>COVID Cases</p>
+                <h2 id="covidCount">0</h2>
+                <span>Predicted COVID scans</span>
+            </div>
+
+            <div class="stat-card">
+                <p>Normal Results</p>
+                <h2 id="normalCount">0</h2>
+                <span>Predicted normal scans</span>
+            </div>
+
+            <div class="stat-card">
+                <p>Other Findings</p>
+                <h2 id="otherCount">0</h2>
+                <span>Other predicted classes</span>
+            </div>
+
+        </section>
+
+        <section class="dashboard-panel">
+            <h2>Recent Scan Activity</h2>
+            <p>Your latest X-ray analysis records.</p>
+
+            <div id="recentScans">
+                Loading recent scans...
+            </div>
+
+            <a href="history.html" class="history-link">View All History →</a>
+        </section>
+
+        <p class="disclaimer">
+            This AI system is for educational and research purposes only.
+            It does not provide a medical diagnosis.
+        </p>
+
+    </main>
+</div>
+
+<script src="js/dashboard.js"></script>
+</body>
+</html>

@@ -1,0 +1,120 @@
+
+.profile-header {
+    margin-bottom: 30px;
+}
+
+.profile-header h1 {
+    color: #fff;
+    font-size: 32px;
+    margin: 10px 0;
+}
+
+.welcome-text {
+    color: #b56cff;
+    font-size: 12px;
+    letter-spacing: 3px;
+    font-weight: bold;
+}
+
+.subtitle {
+    color: #aaa0bd;
+    font-size: 14px;
+}
+
+.profile-card {
+    max-width: 750px;
+    margin: 35px auto;
+    padding: 40px;
+    text-align: center;
+    border-radius: 22px;
+    background: linear-gradient(145deg, #281a43, #130d24);
+    border: 1px solid #65408c;
+    box-shadow: 12px 12px 30px #0006,
+                -5px -5px 20px #a34aff0c;
+}
+
+.profile-avatar {
+    width: 105px;
+    height: 105px;
+    margin: 0 auto 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    font-size: 42px;
+    font-weight: bold;
+    color: white;
+    background: linear-gradient(135deg, #762bea, #d05aff);
+    box-shadow: 0 0 30px #a34aff77;
+}
+
+.profile-card h2 {
+    color: #e0c3ff;
+    font-size: 25px;
+    margin-bottom: 8px;
+}
+
+.profile-email {
+    color: #a99bbd;
+    font-size: 14px;
+}
+
+.profile-divider {
+    height: 1px;
+    background: linear-gradient(90deg, transparent, #8052ad, transparent);
+    margin: 30px 0;
+}
+
+.profile-info {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 18px;
+    text-align: left;
+}
+
+.info-item {
+    padding: 18px;
+    border-radius: 12px;
+    background: #211634;
+    border: 1px solid #493064;
+}
+
+.info-item span {
+    display: block;
+    color: #a99bbd;
+    font-size: 12px;
+    margin-bottom: 9px;
+}
+
+.info-item strong {
+    color: #dfc4ff;
+    font-size: 14px;
+    overflow-wrap: anywhere;
+}
+
+#profileMessage {
+    color: #ff8b8b;
+    margin-top: 20px;
+    font-size: 13px;
+}
+
+.disclaimer {
+    color: #8f849f;
+    font-size: 12px;
+    text-align: center;
+    margin-top: 30px;
+}
+
+@media (max-width: 600px) {
+    .profile-card {
+        padding: 25px 18px;
+    }
+
+    .profile-info {
+        grid-template-columns: 1fr;
+    }
+
+    .profile-header h1 {
+        font-size: 26px;
+    }
+}

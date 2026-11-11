@@ -1,0 +1,82 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Profile | Chest X-Ray Disease Detection</title>
+    <link rel="stylesheet" href="css/scanner.css">
+    <link rel="stylesheet" href="css/profile.css">
+</head>
+<body>
+
+<div class="app-layout">
+
+    <aside class="sidebar">
+        <h2 class="logo">X-Ray AI</h2>
+
+        <nav>
+            <a href="home.html">Home</a>
+            <a href="dashboard.html">Dashboard</a>
+            <a href="scanner.html">AI Scanner</a>
+            <a href="history.html">Scan History</a>
+            <a href="profile.html" class="active">My Profile</a>
+        </nav>
+
+        <button id="logoutBtn">Logout</button>
+    </aside>
+
+    <main class="main-content">
+
+        <header class="profile-header">
+            <p class="welcome-text">ACCOUNT SETTINGS</p>
+            <h1>My Profile</h1>
+            <p class="subtitle">Manage and view your account information.</p>
+        </header>
+
+        <section class="profile-card">
+
+            <div class="profile-avatar" id="profileAvatar">U</div>
+
+            <h2 id="profileName">Loading...</h2>
+            <p class="profile-email" id="profileEmail">Loading email...</p>
+
+            <div class="profile-divider"></div>
+
+            <div class="profile-info">
+                <div class="info-item">
+                    <span>Full Name</span>
+                    <strong id="fullName">Loading...</strong>
+                </div>
+
+                <div class="info-item">
+                    <span>Email Address</span>
+                    <strong id="emailAddress">Loading...</strong>
+                </div>
+
+                <div class="info-item">
+                    <span>Account ID</span>
+                    <strong id="accountId">Loading...</strong>
+                </div>
+
+                <div class="info-item">
+                    <span>Account Created</span>
+                    <strong id="createdAt">Loading...</strong>
+                </div>
+            </div>
+
+            <p id="profileMessage"></p>
+
+        </section>
+
+        <p class="disclaimer">
+            This AI system is for educational and research purposes only.
+            It does not provide a medical diagnosis.
+        </p>
+
+    </main>
+</div>
+
+<script src="js/profile.js"></script>
+</body>
+</html>
