@@ -116,7 +116,6 @@ def health_check():
 async def predict(
     file: UploadFile = File(...),
     db: Session = Depends(get_db),
-    db.add(new_scan),
     current_user: User = Depends(get_current_user)
 ):
     if file.content_type not in (
